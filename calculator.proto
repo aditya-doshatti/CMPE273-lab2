@@ -1,0 +1,15 @@
+syntax = "proto3";
+// The calculator service definition.
+// The request message containing the number.
+message Numbers {
+  float value1 = 1;
+  float value2 = 2;
+}
+
+message Sum {
+    float sum = 1;
+}
+service Calculator {
+  // Sends a request
+  rpc add(Numbers) returns (Sum) {}
+}
